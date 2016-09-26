@@ -1,0 +1,109 @@
+<ion-modal-view>
+
+  <ion-header-bar class="bar bar-assertive-900" ng-click="closeModal()">
+    <h1 class="title logo">Launch the Fu</h1>
+  </ion-header-bar>
+
+  <ion-content style="background-image: url('../img/background-gradient.jpg');">
+
+    <div class="list row">
+    	<label class="item item-input item-md-label" highlight-color="calm" type="text">
+				<input class="center" type="text" placeholder="create a username" ng-model="newUser.username">
+				<span class="input-label"></span>
+				<div class="highlight highlight-calm"></div>
+			</label>
+    </div>
+
+		<div class="list">
+			<ion-checkbox class="logo" ng-click="ripple()" ng-true-value="true" ng-false-value="false" ng-model="newUser.is_truck">
+				Create Food Truck Account
+			</ion-checkbox>
+		</div>
+
+  	<ion-list id="ripple-list" class="disable-user-behavior animate-ripple ion-ripple-list" ng-if="isTruck()">
+  		<div class="list">
+
+	  		<ion-item nav-clear menu-close class="item in in done row" style="transition-delay: 0.39s;">
+	  			<label class="item item-input item-md-label" highlight-color="calm" type="text">
+						<input class="center" type="email" placeholder="enter email address" ng-model="account.email">
+						<span class="input-label"></span>
+						<div class="highlight highlight-calm"></div>
+					</label>
+	  		</ion-item>
+
+	  		<ion-item nav-clear menu-close class="item in in done row" style="transition-delay: 0.39s;">
+	  			<label class="item item-input item-md-label" highlight-color="calm" type="text">
+						<input class="center" type="password" placeholder="create a password" ng-model="account.password">
+						<span class="input-label"></span>
+						<div class="highlight highlight-calm"></div>
+					</label>
+	  		</ion-item>
+
+	  		<ion-item nav-clear menu-close class="item in in done row" style="transition-delay: 0.39s;">
+	  			<label class="item item-input item-md-label" highlight-color="calm" type="text">
+						<input class="center" type="text" placeholder="name of food truck" ng-model="newUser.truck_name">
+						<span class="input-label"></span>
+						<div class="highlight highlight-calm"></div>
+					</label>
+	  		</ion-item>
+
+	  		<ion-item nav-clear menu-close class="item in in done row" style="transition-delay: 0.39s;">
+	  			<label class="item item-input item-md-label" highlight-color="calm" type="text">
+						<input class="center" type="text" placeholder="specialty / cuisine" ng-model="newUser.cuisine">
+						<span class="input-label"></span>
+						<div class="highlight highlight-calm"></div>
+					</label>
+	  		</ion-item>
+
+	  		<ion-item nav-clear menu-close class="item in in done row" style="transition-delay: 0.39s;">
+	  			<label class="item item-input item-md-label" highlight-color="calm" type="text">
+						<input class="center" type="text" placeholder="pickup order phone number" ng-model="newUser.contact_info">
+						<span class="input-label"></span>
+						<div class="highlight highlight-calm"></div>
+					</label>
+	  		</ion-item>
+
+	  		<ion-item nav-clear menu-close class="item in in done row" style="transition-delay: 0.39s;">
+	  			<label class="item item-input item-md-label" highlight-color="calm" type="text">
+						<input class="center" type="text" placeholder="website / menu url" ng-model="newUser.website_url">
+						<span class="input-label"></span>
+						<div class="highlight highlight-calm"></div>
+					</label>
+	  		</ion-item>
+
+	  		<ion-item nav-clear menu-close class="item in in done row" style="transition-delay: 0.39s;">
+	  			<label class="item item-input item-md-label" highlight-color="calm" type="text">
+						<input class="center" type="text" placeholder="twitter handle" ng-model="newUser.twitter_handle">
+						<span class="input-label"></span>
+						<div class="highlight highlight-calm"></div>
+					</label>
+	  		</ion-item>
+
+			</div>
+  	</ion-list>
+
+	  <div class="padding">
+			<button class="button button-block button-calm waves-effect waves-button waves-light" ng-click="register()">Submit</button>
+		</div>
+
+  </ion-content>
+
+</ion-modal-view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

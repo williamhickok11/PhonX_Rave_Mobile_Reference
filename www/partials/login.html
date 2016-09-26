@@ -1,0 +1,58 @@
+<ion-view>
+
+	<ion-content style="background-image: url('./img/background-gradient.jpg');">
+
+			<div class="hero no-header flat">
+				<div class="content">
+					<img src="./img/mobile-food-truck-hi.png" style="height: 50%; width: 50%;">
+					<h1 class="logo">fUber</h1>	
+				</div>
+			</div>
+
+			<ion-list>
+				<div class="list">
+					<ion-item class="item row">
+						<label class="item item-input item-md-label" highlight-color="calm" type="text">
+							<input class="center" type="email" placeholder="email" ng-model="account.email">
+							<span class="input-label"></span>
+							<div class="highlight highlight-calm"></div>
+						</label>
+					</ion-item>
+					<ion-item class="item row">
+						<label class="item item-input item-md-label" highlight-color="calm" type="text">
+							<input class="center" type="password" placeholder="password" ng-model="account.password">
+							<span class="input-label"></span>
+							<div class="highlight highlight-calm"></div>
+						</label>
+					</ion-item>
+				</div>
+			</ion-list>
+
+			<div class="padding">
+				<button class="button button-block button-calm waves-effect waves-button waves-light" ng-click="login()">Login</button>
+			</div>
+
+			<div class="logo center">
+				New to fUber?
+			</div>
+
+			<div class="padding">
+				<button class="button button-block button-calm waves-effect waves-button waves-light" ng-click="openModal()">Register</button>
+			</div>
+
+			<div class="row">
+				<div class="col col-40"></div>
+				<div class="col col-10">
+					<a id="twitter-btn" class="button-icon icon icon-social ion-social-twitter" type="submit" ng-click="loginWithSocial('twitter')"></a>
+				</div>
+			</div>
+
+
+	</ion-content>
+
+</ion-view>
+
+
+
+	
+

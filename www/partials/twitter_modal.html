@@ -1,0 +1,41 @@
+<ion-modal-view>
+
+	<ion-header-bar class="bar bar-header bar-assertive-900" ng-click="closeModal()">
+
+		<!-- If user is a truck, show button to change views -->
+		<div class="buttons buttons-left header-item" ng-if="isTruck()">
+		</div>
+		<div class="h1 title fab-left dark logo">
+			Tweeber
+		</div>
+
+		<!-- Action Menu -->
+		<div class="buttons buttons-right header-item">
+			<span class="right-buttons">
+				<button class="button button-icon button-clear ion-android-more-vertical" ng-click="actionSheet()"></button>
+			</span>
+		</div>
+
+	</ion-header-bar>
+
+	<ion-content>
+		<div id="results" ng-repeat="tweet in tweets">
+			<div class="list card">
+
+				  <div class="item item-avatar">
+				    <img ng-src="{{ tweet.image }}">
+				    <h2>{{ tweet.screen_name }} 
+				    	<a href="{{ url[0].url }}" ng-repeat="url in tweet.urls">
+				    		<i class="icon positive ion-social-twitter" style="padding-left: 10px;"></i>
+				    	</a>
+				    </h2>
+				    <p>{{ tweet.date }}</p>
+				  </div>
+			  <div class="item item-text-wrap ">
+			    {{ tweet.text }}
+			  </div>
+			</div>
+		</div>
+	</ion-content>
+
+</ion-modal-view>
