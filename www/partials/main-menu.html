@@ -1,40 +1,27 @@
 <ion-pane>
 
-	<ion-header-bar class="bar bar-header bar-assertive-900">
+  <!-- CHOOSE SONG -->
+  <div class="choose_song hidden">
+    <div class="row">
+      <div class="col chooseSongHeader m8 offset-m2 white">
+        <h1>Choose your song:</h1>
+        <h4>Music by: PhonX</h3>
+        <h5>(William Hickok)</h5>
+        <div class="button_div">
+          <button id="I_Want_You" class="mybutton waves-effect waves-light btn">Level 1<br>"I Want You"</button><br>
+          <button id="Fade" class="mybutton waves-effect waves-light btn">Level 2<br>"Fade"</button><br>
+          <button id="Slime" class="mybutton waves-effect waves-light btn">Level 3<br>"Slime"</button><br>
+          <button id="coming_soon" disabled class="mybutton waves-effect waves-light btn">Coming Soon</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-		<!-- Header bar / Show button for 'truck-main' if the user is a food truck -->
-		<div class="buttons buttons-left header-item" ng-if="isTruck()">
-		</div>
-		<div class="h1 title fab-left dark logo">
-			Fuber
-		</div>
-
-		<!-- Action Menu -->
-		<div class="buttons buttons-right header-item">
-			<span class="right-buttons">
-				<button class="button button-icon button-clear ion-android-more-vertical" ng-click="actionSheet()"></button>
-			</span>
-		</div>
-
-	</ion-header-bar>
-
-  <!-- Map -->
-  <ion-content>
-    <div id="map" data-tap-disabled="true"></div>
-  </ion-content>
-
+  <!-- Footer -->
   <div class="bar bar-footer bar-assertive-900">
-  	<div class="buttons buttons-left" ng-if="isTruck()">
-  		<button class="button button-calm button-fab" ng-click="setActive()">
-  			<i class="icon ion-pinpoint"></i>
-  		</button>
-  	</div>
-  	<div class="title logo" ng-if="isTruck()">
-  		Hit it to dish it
-  	</div>
-  	<div class="title logo" ng-if="!isTruck()">
-  		Find the Fu
-  	</div>
+  	<div class="leader_board_div">
+      <button class="button leader_board_btn" ng-click="getLeaderBoard()">Leader Boards</button>
+    </div>
   </div>
 
 </ion-pane>

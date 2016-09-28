@@ -1,11 +1,21 @@
-/* Coolors Exported Palette - coolors.co/ffffff-00171f-003459-007ea7-00a8e8 */
-/*
-$white: #ffffff; //rgba(255, 255, 255, 100)
-$black: #00171f; //rgba(0, 23, 31, 100)
-$darkblue: #003459; //rgba(0, 52, 89, 100)
-$medblue: #007ea7; //rgba(0, 126, 167, 100)
-$lightblue: #00a8e8; //rgba(0, 168, 232, 100)
-*/
+.logo {
+	font-family: 'Silverfake';
+	color: black;
+	margin-top: 20px;
+	padding-top: 20px;
+	text-align: center;
+}
+
+.leader_board_btn {
+	width: 100px;
+}
+.leader_board_div {
+	text-align: center;
+}
+
+
+
+
 
 @font-face {
 	font-family: 'Silverfake';
@@ -26,10 +36,7 @@ a {
 	text-align: center;
 }
 
-.logo {
-	font-family: 'Silverfake';
-	color: white;
-}
+
 
 #map {
   height: 100%;
