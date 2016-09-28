@@ -2,8 +2,8 @@
 
 
 var app = angular.module('Fuber', ['ionic', 'ionic-material', 'ionicOAuthService', 'ngCordova', 'ngResource', 'ngRoute', 'firebase'])
-  
-  .constant("firebaseURL", "https://fuber-auth.firebaseio.com/")
+
+  .constant("firebaseURL", "https://phonx-rave.firebaseio.com/")
   .service('UtilityService', ['$ionicPopup', function ($ionicPopup) {
 
     this.isNullOrBlank = function (value) {
@@ -54,9 +54,9 @@ app.config(["$routeProvider",
         controller: "truckMapCtrl",
         resolve: {isAuth}
       }).
-      when("/user-main", {
-        templateUrl: "partials/user_map_view.html",
-        controller: "userMapCtrl",
+      when("/main-menu", {
+        templateUrl: "partials/main-menu.html",
+        controller: "main_menu_Ctrl",
         resolve: {isAuth}
       }).
       otherwise({

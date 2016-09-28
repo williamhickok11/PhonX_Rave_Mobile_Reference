@@ -2,7 +2,7 @@
 
 
 app.controller('loginCtrl', function($scope, $http, $location, $ionicLoading, $ionicPlatform, $timeout, $ionicModal, ionicMaterialMotion, ionicMaterialInk, OAuthService, SOCIAL, UtilityService, authFactory, firebaseURL) {
-  
+
   var ref = new Firebase(firebaseURL);
 
   var oAuthService = OAuthService;
@@ -15,7 +15,7 @@ app.controller('loginCtrl', function($scope, $http, $location, $ionicLoading, $i
   $ionicPlatform.ready(function() {
 
   	// Email and password for firebase auth
-  	$scope.account = {
+  	$scope.oldUser = {
   		email: "",
   		password: ""
   	};
@@ -29,17 +29,6 @@ app.controller('loginCtrl', function($scope, $http, $location, $ionicLoading, $i
   		website_url: "",
   		twitter_handle: "",
   		is_truck: false
-  	};
-
-  	// Determines if the user is a food truck or a regular user
-  	$scope.isTruck = function () {
-  		if ($scope.newUser.is_truck) {
-  			return true;
-  			$scope.$apply();
-  		} else {
-  			return false;
-  			$scope.$apply();
-  		}
   	};
 
 		// Registers a new user and creates a new user_data object through firebase.
@@ -61,9 +50,9 @@ app.controller('loginCtrl', function($scope, $http, $location, $ionicLoading, $i
 
 		// Authenticates and logs in a previously registered user with firebase.
 		$scope.login = function () {
-			authFactory.authenticate($scope.account)
+			authFactory.authenticate($scope.oldUser)
 				.then(function () {
-					$location.path("/user-main");
+					$location.path("/main-menu");
 					$scope.$apply();
 				})
 		};

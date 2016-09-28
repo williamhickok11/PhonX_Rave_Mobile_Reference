@@ -11,7 +11,7 @@ app.factory("authFactory", function ($http, firebaseURL) {
     isAuthenticated () {
       var authData = ref.getAuth();
       if (authData) {
-        return true;    
+        return true;
       } else {
         return false;
       }
@@ -26,17 +26,6 @@ app.factory("authFactory", function ($http, firebaseURL) {
           function (error) {reject(error)}
         )
       });
-    },
-
-    // getTruck() returns the truck user objects
-    getTruck () {
-    	return new Promise(function (resolve, reject) {
- 				$http.get(`http://localhost:3000/api/truck_user`)
- 				.then(
- 					function (truckObj) {resolve(truckObj)},
- 					function (error) {reject(error)}
- 				)  		
-    	});
     },
 
     // Authenticates user through Firebase
